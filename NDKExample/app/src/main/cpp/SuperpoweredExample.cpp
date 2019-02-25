@@ -83,7 +83,7 @@ bool SuperpoweredExample::process(short int *output, unsigned int numberOfSample
 static SuperpoweredExample *example = NULL;
 
 extern "C" {
-JNIEXPORT void Java_com_example_superpoweredsample_MainActivity_SuperpoweredExample(JNIEnv *javaEnvironment,
+JNIEXPORT void Java_com_ananthrajsingh_ndkexample_MainActivity_SuperpoweredExample(JNIEnv *javaEnvironment,
                                                                                     jobject __unused obj,
                                                                                     jint samplerate,
                                                                                     jint buffersize,
@@ -97,18 +97,18 @@ JNIEXPORT void Java_com_example_superpoweredsample_MainActivity_SuperpoweredExam
     javaEnvironment->ReleaseStringUTFChars(apkPath, path);
 }
 
-JNIEXPORT void Java_com_example_superpoweredsample_MainActivity_onPlayPause(JNIEnv *__unused javaEnvironment, jobject __unused obj, jboolean play) {
+JNIEXPORT void Java_com_ananthrajsingh_ndkexample_MainActivity_onPlayPause(JNIEnv *__unused javaEnvironment, jobject __unused obj, jboolean play) {
     example->onPlayPause(play);
 }
 
-JNIEXPORT void Java_com_example_superpoweredsample_MainActivity_onPitchChanged(JNIEnv *__unused javaEnvironment, jobject __unused obj, jint pitchValue) {
+JNIEXPORT void Java_com_ananthrajsingh_ndkexample_MainActivity_onPitchChanged(JNIEnv *__unused javaEnvironment, jobject __unused obj, jint pitchValue) {
     example->onPitchChanged(pitchValue);
 }
-JNIEXPORT void Java_com_example_superpoweredsample_MainActivity_onTempoSelected(JNIEnv *__unused javaEnvironment, jobject __unused obj, jint timeStretchValue) {
+JNIEXPORT void Java_com_ananthrajsingh_ndkexample_MainActivity_onTempoSelected(JNIEnv *__unused javaEnvironment, jobject __unused obj, jint timeStretchValue) {
     example->onTempoSelected(timeStretchValue);
 }
 
-JNIEXPORT void Java_com_example_superpoweredsample_MainActivity_seekTo(JNIEnv *__unused javaEnvironment, jobject __unused obj, jdouble position) {
+JNIEXPORT void Java_ananthrajsingh_ndkexample_MainActivity_seekTo(JNIEnv *__unused javaEnvironment, jobject __unused obj, jdouble position) {
     example->seekTo(position);
 }
 }

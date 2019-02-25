@@ -7,6 +7,10 @@ def superpowered_sdk_path = properties.getProperty('superpowered.dir')
 android {
     android.buildToolsVersion "28.0.3"
     compileSdkVersion 28
+
+    dataBinding{
+        enabled=true
+    }
     defaultConfig {
         applicationId "com.ananthrajsingh.ndkexample"
         minSdkVersion 21
