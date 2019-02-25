@@ -36,7 +36,7 @@ add_library( # Sets the name of the library.
 add_library(
     SuperpoweredExample
     SHARED
-    src/main/cpp/SuperpoweredExample.cpp
+    ${src/main/cpp}SuperpoweredExample.cpp
 )
 
 add_library(
